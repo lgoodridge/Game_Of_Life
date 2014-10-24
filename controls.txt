@@ -1,0 +1,83 @@
+Title: Game_Of_Life.pde
+Author: Lance Goodridge
+Date Created: 5/7/14
+Description: Simulates Conway’s Game of Life
+
+Constants to be modified are listed at the beginning of the program.
+
+NOTE: You cannot dynamically toggle cells on and off in this version.
+
+—————————————————————————————————————————
+
+CONTROLS: 
+‘p’ = pause, 
+‘r’ = randomize, 
+‘enter’ = zoom in, 
+‘shift’ = zoom out, 
+arrow keys = move
+
+—————————————————————————————————————————
+
+You can modify the Rules to get some cool effects:
+
+DEFAULT: 
+The standard game of life
+final int[] STAY_ALIVE_RULES = {2, 3};
+final int[] BIRTH_RULES = {3};
+
+MAZE: 
+Generates a maze like pattern
+final int[] STAY_ALIVE_RULES = {2, 3, 4};
+final int[] BIRTH_RULES = {3};
+
+FUNGAL GROWTH:
+Forms ellipses that quickly grow
+final int[] STAY_ALIVE_RULES = {2, 3, 4};
+final int[] BIRTH_RULES = {3, 4};
+
+RAPID REPEATER:
+Quickly eliminates everything except repeaters and stationary objects.
+final int[] STAY_ALIVE_RULES = {2, 4};
+final int[] BIRTH_RULES = {3};
+
+COLONY MAZE GROWTH:
+Quickly forms “colonies” that expand and eventually connect. Leaves behind a maze.
+NOTE: There’s a really awesome repeating pattern that’s quite common in this one
+NOTE2: Midway through the generation, it looks ALOT like a fictional earth
+final int[] STAY_ALIVE_RULES = {3, 4, 5};
+final int[] BIRTH_RULES = {3};
+
+And here are some that just derive off of the previous ones:
+
+FUNGAL MAZE GROWTH:
+Same as fungal growth, except the end has a maze pattern
+final int[] STAY_ALIVE_RULES = {2, 3, 4, 5};
+final int[] BIRTH_RULES = {3, 4};
+
+—————————————————————————————————————————
+
+DEFAULT SETTINGS:
+
+final int WIDTH = 5000;
+final int HEIGHT = 5000;
+
+final int VIEW_WIDTH = 1000;
+final int VIEW_HEIGHT = 700;
+
+final int CELL_SIZE = 5;
+
+final int BACKGROUND_BRIGHTNESS = 20;
+final int ALIVE_CELL_BRIGHTNESS = 200;
+
+final int MAJOR_GRID_BRIGHTNESS = 100;
+final int MINOR_GRID_BRIGHTNESS = 75;
+
+final int RANDOMIZE_PERCENTAGE = 10;
+
+final int DELAY = 0;
+
+final int[] STAY_ALIVE_RULES = {2, 3};
+final int[] BIRTH_RULES = {3};
+
+final float ZOOM_SENSITIVITY = 0.5;
+final float TRANSLATE_SENSITIVITY = 20;
